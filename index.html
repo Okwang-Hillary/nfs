@@ -1,1 +1,352 @@
-... updated content ...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearly Free Software Dashboard</title>
+  <style>
+    :root {
+      --bg-colour: #f5f8ff;
+      --text-primary: #1f2937;
+      --text-secondary: #475569;
+      --link-colour: #2563eb;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-colour);
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .header img {
+      width: 60px;
+      height: 60px;
+      margin-right: 0.5rem;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .tagline {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .tagline a {
+      color: var(--link-colour);
+      font-size: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .tagline a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px var(--card-shadow);
+      text-align: center;
+    }
+
+    .icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 2rem;
+      margin: 0 auto 0.75rem;
+    }
+
+    .card > a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .card > a:hover {
+      text-decoration: none;
+    }
+
+    .card h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0.25rem 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .doc-link {
+      color: var(--link-colour);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .doc-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 3rem 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .powered-by {
+      margin-top: 1rem;
+    }
+
+    .powered-by a {
+      color: var(--link-colour);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .powered-by a:hover {
+      text-decoration: underline;
+    }
+
+    .icon.nextcloud { background-color: #2a7bde; }
+    .icon.roundcube { background-color: #3bb5ad; }
+    .icon.vaultwarden { background-color: #4b5563; }
+    .icon.wordpress { background-color: #21759b; }
+    .icon.billing { background-color: #8b5cf6; }
+    .icon.headplane { background-color: #ec4899; }
+    .icon.panel { background-color: #4f46e5; }
+    .icon.powerdns { background-color: #ea580c; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="NFS log transparent large.png" alt="Nearly Free Software logo" />
+      <h1>NFS</h1>
+    </div>
+
+    <div class="tagline">
+      <a href="https://nearlyfreesoftware.com" target="_blank" rel="noopener">nearlyfreesoftware.com</a>
+    </div>
+
+    <div class="section">
+      <h2>Applications</h2>
+      <div class="grid">
+        <div class="card">
+          <a href="https://nextcloud.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon nextcloud">N</div>
+          </a>
+          <h3>Nextcloud</h3>
+          <p>Files, Documents, Email</p>
+          <a class="doc-link" href="https://docs.nextcloud.com/server/latest/user_manual/en/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://roundcube.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon roundcube">R</div>
+          </a>
+          <h3>Roundcube</h3>
+          <p>Web Mail</p>
+          <a class="doc-link" href="https://roundcube.net/support/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://vaultwarden.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon vaultwarden">V</div>
+          </a>
+          <h3>Vaultwarden</h3>
+          <p>Passwords</p>
+          <a class="doc-link" href="https://bitwarden.com/help/onboarding-and-succession/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://baserow.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#f59e0b;">B</div>
+          </a>
+          <h3>Baserow</h3>
+          <p>Visual Database Builder</p>
+          <a class="doc-link" href="https://baserow.io/docs/index" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://calcom.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#10b981;">C</div>
+          </a>
+          <h3>Cal.com</h3>
+          <p>Scheduling & Appointments</p>
+          <a class="doc-link" href="https://cal.com/docs/self-hosting/installation" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://element.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#6366f1;">E</div>
+          </a>
+          <h3>Element</h3>
+          <p>Secure Team Chat (Matrix)</p>
+          <a class="doc-link" href="https://element.io/user-guide" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://espocrm.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#ef4444;">E</div>
+          </a>
+          <h3>EspoCRM</h3>
+          <p>Customer Relationship Management</p>
+          <a class="doc-link" href="https://docs.espocrm.com/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://freescout.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#14b8a6;">F</div>
+          </a>
+          <h3>FreeScout</h3>
+          <p>Customer Support Helpdesk</p>
+          <a class="doc-link" href="https://github.com/freescout-help-desk/freescout/wiki/Installation-Guide" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://gitea.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#16a34a;">G</div>
+          </a>
+          <h3>Gitea</h3>
+          <p>Git Source Control</p>
+          <a class="doc-link" href="https://docs.gitea.com/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://meet.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#f97316;">J</div>
+          </a>
+          <h3>Jitsi</h3>
+          <p>Video Conferencing</p>
+          <a class="doc-link" href="https://jitsi.github.io/handbook/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://plane.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#8b5cf6;">P</div>
+          </a>
+          <h3>Plane</h3>
+          <p>Project & Issue Tracking</p>
+          <a class="doc-link" href="https://docs.plane.so/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="section">
+      <h2>Content Management</h2>
+      <div class="grid">
+        <div class="card">
+          <a href="https://bookstack.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon" style="background-color:#0ea5e9;">B</div>
+          </a>
+          <h3>BookStack</h3>
+          <p>Wiki & Knowledge Base</p>
+          <a class="doc-link" href="https://www.bookstackapp.com/docs/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon wordpress">W</div>
+          </a>
+          <h3>WordPress</h3>
+          <p>Your website</p>
+          <a class="doc-link" href="https://wordpress.org/documentation/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="section">
+      <h2>Administration</h2>
+      <div class="grid">
+        <div class="card">
+          <a href="https://headscale.nearlyfreesoftware.com/admin" target="_blank" rel="noopener">
+            <div class="icon headplane">H</div>
+          </a>
+          <h3>Headplane</h3>
+          <p>User Interface for the Headscale VPN</p>
+          <a class="doc-link" href="https://headplane.net/README" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://panel.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon panel">P</div>
+          </a>
+          <h3>Panel</h3>
+          <p>Create and Manage Users</p>
+          <a class="doc-link" href="#" target="_blank" rel="noopener">Documentation</a>
+        </div>
+
+        <div class="card">
+          <a href="https://powerdns.nearlyfreesoftware.com" target="_blank" rel="noopener">
+            <div class="icon powerdns">P</div>
+          </a>
+          <h3>PowerDNS</h3>
+          <p>DNS Domain Management</p>
+          <a class="doc-link" href="https://doc.powerdns.com/" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="footer">
+      <div class="powered-by">
+        Powered by <a href="https://nearlyfreesoftware.com" target="_blank" rel="noopener">Nearly Free Software</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
